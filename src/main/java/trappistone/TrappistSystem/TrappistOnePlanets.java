@@ -1,5 +1,6 @@
 package trappistone.TrappistSystem;
 
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
@@ -8,6 +9,8 @@ import micdoodle8.mods.galacticraft.api.galaxies.Star;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import net.minecraft.util.ResourceLocation;
 import trappistone.Core;
+import trappistone.TrappistSystem.planets.trappistOneB.dimension.TeleportTypeTrappistOneB;
+import trappistone.TrappistSystem.planets.trappistOneB.dimension.WorldProviderTrappistOneB;
 
 
 public class TrappistOnePlanets {
@@ -67,7 +70,7 @@ public class TrappistOnePlanets {
 				TrappistOneB.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.25F, 0.25F));
 				TrappistOneB.setRelativeOrbitTime(0.24096385542168674698795180722892F);
 				TrappistOneB.setBodyIcon(new ResourceLocation(Core.ASSET_PREFIX, "textures/gui/celestialbodies/trappistone/TrappistOneB.png"));
-				//TrappistOneB.setDimensionInfo(GSConfigDimensions.dimensionIDMercury, WorldProviderMercury.class);
+				TrappistOneB.setDimensionInfo(-35, WorldProviderTrappistOneB.class);
     	// --------------------------------------------
 		// TODO TrappistOneC -------------------------------
 				TrappistOneC = (Planet) new Planet("TrappistOneC").setParentSolarSystem(TrappistOneSystem);
@@ -153,7 +156,7 @@ public class TrappistOnePlanets {
 	
 	private static void registryteleport()
 	{
-		//GalacticraftRegistry.registerTeleportType(WorldProviderMercury.class, new WorldProviderMercury());
+		GalacticraftRegistry.registerTeleportType(WorldProviderTrappistOneB.class, new TeleportTypeTrappistOneB());
 		
 	}
 	
