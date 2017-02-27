@@ -60,7 +60,7 @@ public class Core
     @Instance("Core")
     public static Core instance;
 
-    @SidedProxy(clientSide="trappistone.TrappistSystem.core.proxy.ClientProxy", serverSide="trappistone.TrappistSystem.core.proxy.CommonProxy")
+    @SidedProxy(clientSide="trappistone.core.proxy.ClientProxy", serverSide="trappistone.core.proxy.CommonProxy")
 
     public static CommonProxy proxy;
 
