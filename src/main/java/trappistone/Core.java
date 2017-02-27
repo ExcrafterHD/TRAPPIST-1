@@ -1,7 +1,5 @@
 package trappistone;
 
-
-
 import java.io.File;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
@@ -32,15 +30,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.FMLRelaunchLog;
 
- 
-
-@Mod(
-		   modid = Core.MODID,
-		   version = Core.VERSION,
-		   dependencies = "required-after:GalacticraftCore; required-after:GalacticraftMars;",
-		   name = Core.NAME
-		)
-
+@Mod(modid = Core.MODID, version = Core.VERSION, dependencies = "required-after:GalacticraftCore; required-after:GalacticraftMars;", name = Core.NAME)
 public class Core
 
 {
@@ -48,92 +38,81 @@ public class Core
 	public static final int major_version = 0;
 	public static final int minor_version = 0;
 	public static final int build_version = 1;
-	
-    public static final String MODID = "TrappistSystem";
-    public static final String VERSION = "0.0.1";
-    public static final String NAME = "TrappistSystem";
-    public static final String ASSET_PREFIX = "trappistone";
 
-    public static boolean debug = false;
-    //---------------------------------------------
-    
-    @Instance("Core")
-    public static Core instance;
+	public static final String MODID = "TrappistSystem";
+	public static final String VERSION = "0.0.1";
+	public static final String NAME = "TrappistSystem";
+	public static final String ASSET_PREFIX = "trappistone";
 
-    @SidedProxy(clientSide="trappistone.core.proxy.ClientProxy", serverSide="trappistone.core.proxy.CommonProxy")
+	public static boolean debug = false;
+	// ---------------------------------------------
 
-    public static CommonProxy proxy;
+	@Instance("Core")
+	public static Core instance;
 
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event) 
-    {
-    	
-    	proxy.preload();
+	@SidedProxy(clientSide = "trappistone.core.proxy.ClientProxy", serverSide = "trappistone.core.proxy.CommonProxy")
+	public static CommonProxy proxy;
+
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
+
+		proxy.preload();
 	}
 
-   
-
-    @EventHandler
-    public void init(FMLInitializationEvent event)
-    {  
-    	proxy.load();
-    	this.registerEntities();
-    	// TODO Register Planets: -------------------------------
-    	
-    	TrappistOnePlanets.init();
-    	
-       	TPCreativeTabs.TPBlocksTab = new CreativeTabGC(CreativeTabs.getNextID(), "TPBlocks", Item.getItemFromBlock(Blocks.grass), 0);
-        TPCreativeTabs.TPItemsTab = new CreativeTabGC(CreativeTabs.getNextID(), "TPItems", Items.arrow, 0);
-        TPCreativeTabs.TPArmorTab = new CreativeTabGC(CreativeTabs.getNextID(), "TPArmor", Items.diamond_helmet, 0);
-   
-    }
-
-    
-
-    @EventHandler
-    public void postInit(FMLPostInitializationEvent event) {
-    
-    	proxy.postload();
-    }
-    
 	@EventHandler
-	public void serverInit(FMLServerStartedEvent event)
-	{
+	public void init(FMLInitializationEvent event) {
+		proxy.load();
+		this.registerEntities();
+		// TODO Register Planets: -------------------------------
+
+		TrappistOnePlanets.init();
+
+		TPCreativeTabs.TPBlocksTab = new CreativeTabGC(
+				CreativeTabs.getNextID(), "TPBlocks",
+				Item.getItemFromBlock(Blocks.grass), 0);
+		TPCreativeTabs.TPItemsTab = new CreativeTabGC(CreativeTabs.getNextID(),
+				"TPItems", Items.arrow, 0);
+		TPCreativeTabs.TPArmorTab = new CreativeTabGC(CreativeTabs.getNextID(),
+				"TPArmor", Items.diamond_helmet, 0);
+
+	}
+
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event) {
+
+		proxy.postload();
+	}
+
+	@EventHandler
+	public void serverInit(FMLServerStartedEvent event) {
 		ThreadVersionCheck.startCheck();
 	}
-    
-    private void registerEntities()
-    {
-        this.registerCreatures();
-        this.registerNonMobEntities();
-        this.registerTileEntities();
-        this.registerRecipesWorkBench();
-    }
-    
-    public void registerCreatures()
-	{
-    }
 
-    private void registerNonMobEntities()
-    {
-    }
+	private void registerEntities() {
+		this.registerCreatures();
+		this.registerNonMobEntities();
+		this.registerTileEntities();
+		this.registerRecipesWorkBench();
+	}
 
-    private void registerTileEntities()
-    {
-    }
-    
-    private void registerRecipesWorkBench()
-    {
-    }
-    
-    public static void info(String message)
-	{ 
+	public void registerCreatures() {
+	}
+
+	private void registerNonMobEntities() {
+	}
+
+	private void registerTileEntities() {
+	}
+
+	private void registerRecipesWorkBench() {
+	}
+
+	public static void info(String message) {
 		FMLRelaunchLog.log("TrappistSystem", Level.INFO, message);
 	}
 
-	public static void severe(String message)
-	{
+	public static void severe(String message) {
 		FMLRelaunchLog.log("TrappistSystem", Level.ERROR, message);
 	}
-    
+
 }
