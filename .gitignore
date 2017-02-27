@@ -2,3 +2,4 @@
 *.class
 /eclipse/*
 /.settings/*
+/bin/*
