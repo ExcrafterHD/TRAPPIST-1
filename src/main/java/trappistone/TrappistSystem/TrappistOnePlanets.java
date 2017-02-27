@@ -67,7 +67,7 @@ public class TrappistOnePlanets {
 		*/
 		
 		  // TODO Trappist One System ----------------------------
-		TrappistOneSystem = new SolarSystem("TrappistOneSystem", "milkyWay").setMapPosition(new Vector3(1.0F, -2.0F, 0.0F));
+		TrappistOneSystem = new SolarSystem("TrappistOneSystem", "milkyWay").setMapPosition(new Vector3(-2.0F, 5.0F, 0.0F));
 		TrappistOneA = (Star) new Star("TrappistOneA").setParentSolarSystem(TrappistOneSystem).setTierRequired(-1);
 		TrappistOneA.setBodyIcon(new ResourceLocation(Core.ASSET_PREFIX, "textures/gui/celestialbodies/trappistone/TrappistOneA.png"));
 		TrappistOneSystem.setMainStar(TrappistOneA);
