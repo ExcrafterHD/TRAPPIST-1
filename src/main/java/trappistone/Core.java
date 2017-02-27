@@ -9,12 +9,15 @@ import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.util.CreativeTabGC;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 
 import org.apache.logging.log4j.Level;
 
+import trappistone.TrappistSystem.TrappistOnePlanets;
 import trappistone.TrappistSystem.core.proxy.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -48,8 +51,8 @@ public class Core
 	
     public static final String MODID = "TrappistSystem";
     public static final String VERSION = "0.0.1";
-    public static final String NAME = "GalaxySpace";
-    public static final String ASSET_PREFIX = "galaxyspace";
+    public static final String NAME = "TrappistSystem";
+    public static final String ASSET_PREFIX = "trappistone";
 
     public static boolean debug = false;
     //---------------------------------------------
@@ -77,11 +80,11 @@ public class Core
     	this.registerEntities();
     	// TODO Register Planets: -------------------------------
     	
-    	//SolarSystemPlanets.init();
+    	TrappistOnePlanets.init();
     	
-       	//GSCreativeTabs.GSBlocksTab = new CreativeTabGC(CreativeTabs.getNextID(), "AddonsBlocks", Item.getItemFromBlock(GSBlocks.CeresGlowStone), 0);
-        //GSCreativeTabs.GSItemsTab = new CreativeTabGC(CreativeTabs.getNextID(), "AddonsItems", GSItems.Tier7Rocket, 0);
-        //GSCreativeTabs.GSArmorTab = new CreativeTabGC(CreativeTabs.getNextID(), "AddonsArmor", GSItems.JetPack, 0);
+       	TPCreativeTabs.TPBlocksTab = new CreativeTabGC(CreativeTabs.getNextID(), "TPBlocks", Item.getItemFromBlock(Blocks.grass), 0);
+        TPCreativeTabs.TPItemsTab = new CreativeTabGC(CreativeTabs.getNextID(), "TPItems", Items.arrow, 0);
+        TPCreativeTabs.TPArmorTab = new CreativeTabGC(CreativeTabs.getNextID(), "TPArmor", Items.diamond_helmet, 0);
    
     }
 
@@ -96,7 +99,7 @@ public class Core
 	@EventHandler
 	public void serverInit(FMLServerStartedEvent event)
 	{
-		//ThreadVersionCheck.startCheck();
+		ThreadVersionCheck.startCheck();
 	}
     
     private void registerEntities()

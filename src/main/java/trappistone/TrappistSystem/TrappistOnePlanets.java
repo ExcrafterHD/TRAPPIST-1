@@ -1,26 +1,13 @@
 package trappistone.TrappistSystem;
 
-import trappistone.BodiesInfo;
-import trappistone.Core;
-import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
-import micdoodle8.mods.galacticraft.api.galaxies.Moon;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
-import micdoodle8.mods.galacticraft.api.galaxies.Satellite;
 import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
 import micdoodle8.mods.galacticraft.api.galaxies.Star;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.api.world.IAtmosphericGas;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.world.gen.OverworldGenerator;
-import micdoodle8.mods.galacticraft.planets.asteroids.AsteroidsModule;
-import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
-import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.WorldProvider;
-import cpw.mods.fml.common.registry.GameRegistry;
+import trappistone.Core;
 
 
 public class TrappistOnePlanets {
@@ -66,24 +53,85 @@ public class TrappistOnePlanets {
 		 * Eris Distance: 4.0F
 		*/
 		
-		  // TODO Trappist One System ----------------------------
-		TrappistOneSystem = new SolarSystem("TrappistOneSystem", "milkyWay").setMapPosition(new Vector3(-2.0F, 5.0F, 0.0F));
-		TrappistOneA = (Star) new Star("TrappistOneA").setParentSolarSystem(TrappistOneSystem).setTierRequired(-1);
-		TrappistOneA.setBodyIcon(new ResourceLocation(Core.ASSET_PREFIX, "textures/gui/celestialbodies/trappistone/TrappistOneA.png"));
-		TrappistOneSystem.setMainStar(TrappistOneA);
-      
-        
+		// TODO Trappist One System ----------------------------
+				TrappistOneSystem = new SolarSystem("TrappistOneSystem", "milkyWay").setMapPosition(new Vector3(-2.0F, 1.0F, 0.0F));
+				TrappistOneA = (Star) new Star("TrappistOneA").setParentSolarSystem(TrappistOneSystem).setTierRequired(-1);
+				TrappistOneA.setBodyIcon(new ResourceLocation(Core.ASSET_PREFIX, "textures/gui/celestialbodies/trappistone/TrappistOneA.png"));
+				TrappistOneSystem.setMainStar(TrappistOneA);
+		// --------------------------------------------        
         // TODO TrappistOneB -------------------------------
-		TrappistOneB = (Planet) new Planet("TrappistOneB").setParentSolarSystem(TrappistOneSystem);
-		TrappistOneB.setRingColorRGB(0.0F, 0.4F, 0.9F);
-		TrappistOneB.setPhaseShift(1.45F);
-		TrappistOneB.setTierRequired(1);
-		TrappistOneB.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.25F, 0.25F));
-		TrappistOneB.setRelativeOrbitTime(0.24096385542168674698795180722892F);
-		TrappistOneB.setBodyIcon(new ResourceLocation(Core.ASSET_PREFIX, "textures/gui/celestialbodies/trappistone/TrappistOneB.png"));
-		//TrappistOneB.setDimensionInfo(GSConfigDimensions.dimensionIDMercury, WorldProviderMercury.class);
+				TrappistOneB = (Planet) new Planet("TrappistOneB").setParentSolarSystem(TrappistOneSystem);
+				TrappistOneB.setRingColorRGB(0.0F, 0.4F, 0.9F);
+				TrappistOneB.setPhaseShift((float) Math.PI);
+				TrappistOneB.setTierRequired(1);
+				TrappistOneB.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.25F, 0.25F));
+				TrappistOneB.setRelativeOrbitTime(0.24096385542168674698795180722892F);
+				TrappistOneB.setBodyIcon(new ResourceLocation(Core.ASSET_PREFIX, "textures/gui/celestialbodies/trappistone/TrappistOneB.png"));
+				//TrappistOneB.setDimensionInfo(GSConfigDimensions.dimensionIDMercury, WorldProviderMercury.class);
     	// --------------------------------------------
-    	registrycelestial();
+		// TODO TrappistOneC -------------------------------
+				TrappistOneC = (Planet) new Planet("TrappistOneC").setParentSolarSystem(TrappistOneSystem);
+				TrappistOneC.setRingColorRGB(0.0F, 0.4F, 0.9F);
+				TrappistOneC.setPhaseShift((float) Math.PI / 2);
+				TrappistOneC.setTierRequired(1);
+				TrappistOneC.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.3F, 0.3F));
+				TrappistOneC.setRelativeOrbitTime(4.24096385542168674698795180722892F);
+				TrappistOneC.setBodyIcon(new ResourceLocation(Core.ASSET_PREFIX, "textures/gui/celestialbodies/trappistone/TrappistOneC.png"));
+				//TrappistOneB.setDimensionInfo(GSConfigDimensions.dimensionIDMercury, WorldProviderMercury.class);
+		// --------------------------------------------
+		// TODO TrappistOneD -------------------------------
+				TrappistOneD = (Planet) new Planet("TrappistOneD").setParentSolarSystem(TrappistOneSystem);
+				TrappistOneD.setRingColorRGB(0.0F, 0.4F, 0.9F);
+				TrappistOneD.setPhaseShift((float) Math.PI / 4);
+				TrappistOneD.setTierRequired(1);
+				TrappistOneD.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.35F, 0.35F));
+				TrappistOneD.setRelativeOrbitTime(6.24096385542168674698795180722892F);
+				TrappistOneD.setBodyIcon(new ResourceLocation(Core.ASSET_PREFIX, "textures/gui/celestialbodies/trappistone/TrappistOneD.png"));
+				//TrappistOneB.setDimensionInfo(GSConfigDimensions.dimensionIDMercury, WorldProviderMercury.class);
+		// --------------------------------------------	
+		// TODO TrappistOneE -------------------------------
+				TrappistOneE = (Planet) new Planet("TrappistOneB").setParentSolarSystem(TrappistOneSystem);
+				TrappistOneE.setRingColorRGB(0.0F, 0.4F, 0.9F);
+				TrappistOneE.setPhaseShift((float) Math.PI / 6);
+				TrappistOneE.setTierRequired(1);
+				TrappistOneE.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.4F, 0.4F));
+				TrappistOneE.setRelativeOrbitTime(12.24096385542168674698795180722892F);
+				TrappistOneE.setBodyIcon(new ResourceLocation(Core.ASSET_PREFIX, "textures/gui/celestialbodies/trappistone/TrappistOneB.png"));
+				//TrappistOneB.setDimensionInfo(GSConfigDimensions.dimensionIDMercury, WorldProviderMercury.class);
+		// --------------------------------------------
+		// TODO TrappistOneF -------------------------------
+				TrappistOneF = (Planet) new Planet("TrappistOneF").setParentSolarSystem(TrappistOneSystem);
+				TrappistOneF.setRingColorRGB(0.0F, 0.4F, 0.9F);
+				TrappistOneF.setPhaseShift((float) Math.PI * 2);
+				TrappistOneF.setTierRequired(1);
+				TrappistOneF.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.45F, 0.45F));
+				TrappistOneF.setRelativeOrbitTime(15.24096385542168674698795180722892F);
+				TrappistOneF.setBodyIcon(new ResourceLocation(Core.ASSET_PREFIX, "textures/gui/celestialbodies/trappistone/TrappistOneF.png"));
+				//TrappistOneB.setDimensionInfo(GSConfigDimensions.dimensionIDMercury, WorldProviderMercury.class);
+		// --------------------------------------------
+		// TODO TrappistOneG -------------------------------
+				TrappistOneG = (Planet) new Planet("TrappistOneG").setParentSolarSystem(TrappistOneSystem);
+				TrappistOneG.setRingColorRGB(0.0F, 0.4F, 0.9F);
+				TrappistOneG.setPhaseShift((float) Math.PI * 2 / 4);
+				TrappistOneG.setTierRequired(1);
+				TrappistOneG.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F));
+				TrappistOneG.setRelativeOrbitTime(18.24096385542168674698795180722892F);
+				TrappistOneG.setBodyIcon(new ResourceLocation(Core.ASSET_PREFIX, "textures/gui/celestialbodies/trappistone/TrappistOneG.png"));
+				//TrappistOneB.setDimensionInfo(GSConfigDimensions.dimensionIDMercury, WorldProviderMercury.class);
+		// --------------------------------------------
+		// TODO TrappistOneH -------------------------------
+				TrappistOneH = (Planet) new Planet("TrappistOneH").setParentSolarSystem(TrappistOneSystem);
+				TrappistOneH.setRingColorRGB(0.0F, 0.4F, 0.9F);
+				TrappistOneH.setPhaseShift((float) Math.PI * 2 / 6);
+				TrappistOneH.setTierRequired(1);
+				TrappistOneH.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.55F, 0.55F));
+				TrappistOneH.setRelativeOrbitTime(20.24096385542168674698795180722892F);
+				TrappistOneH.setBodyIcon(new ResourceLocation(Core.ASSET_PREFIX, "textures/gui/celestialbodies/trappistone/TrappistOneH.png"));
+				//TrappistOneB.setDimensionInfo(GSConfigDimensions.dimensionIDMercury, WorldProviderMercury.class);
+		// --------------------------------------------
+				
+				
+		registrycelestial();
     	registryteleport();
     	
     	//body, classP, gravity, pressure, temp, wind, daytime, breath, solar
@@ -94,8 +142,13 @@ public class TrappistOnePlanets {
 	{
 		GalaxyRegistry.registerSolarSystem(TrappistOneSystem);
 		
-		BodiesInfo.registerBody(TrappistOneSystem.getMainStar(), BodiesInfo.red + " " + BodiesInfo.dwarf, 28.088F, 0, 999, 0, 0, false, false);
-		
+		GalaxyRegistry.registerPlanet(TrappistOneB);
+		GalaxyRegistry.registerPlanet(TrappistOneC);
+		GalaxyRegistry.registerPlanet(TrappistOneD);
+		GalaxyRegistry.registerPlanet(TrappistOneE);
+		GalaxyRegistry.registerPlanet(TrappistOneF);
+		GalaxyRegistry.registerPlanet(TrappistOneG);
+		GalaxyRegistry.registerPlanet(TrappistOneH);
 	}
 	
 	private static void registryteleport()
