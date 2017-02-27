@@ -1,3 +1,4 @@
 .classpath
 *.class
 /eclipse/*
+/.settings/*
