@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import trappistone.TrappistSystem.core.world.gen.TPBiomeGenBase;
+import trappistone.core.world.gen.TPBiomeGenBase;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldChunkManagerSpace;
 import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.World;

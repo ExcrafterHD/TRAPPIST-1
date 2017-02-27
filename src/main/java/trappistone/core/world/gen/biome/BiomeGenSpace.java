@@ -1,7 +1,7 @@
-package trappistone.TrappistSystem.core.world.gen.biome;
+package trappistone.core.world.gen.biome;
 
 
-import trappistone.TrappistSystem.core.world.gen.TPBiomeGenBase;
+import trappistone.core.world.gen.TPBiomeGenBase;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.common.BiomeDictionary;

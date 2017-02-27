@@ -1,6 +1,6 @@
-package trappistone.TrappistSystem.core.world.gen;
+package trappistone.core.world.gen;
 
-import trappistone.TrappistSystem.core.world.gen.biome.BiomeGenSpace;
+import trappistone.core.world.gen.biome.BiomeGenSpace;
 import net.minecraft.block.Block;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;

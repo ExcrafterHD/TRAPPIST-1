@@ -18,7 +18,7 @@ import net.minecraftforge.common.MinecraftForge;
 import org.apache.logging.log4j.Level;
 
 import trappistone.TrappistSystem.TrappistOnePlanets;
-import trappistone.TrappistSystem.core.proxy.CommonProxy;
+import trappistone.core.proxy.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;

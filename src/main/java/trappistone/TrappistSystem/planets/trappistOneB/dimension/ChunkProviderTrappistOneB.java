@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import trappistone.TrappistSystem.core.world.gen.ChunkProviderSpaceCraters;
-import trappistone.TrappistSystem.core.world.gen.TPBiomeGenBase;
+import trappistone.core.world.gen.ChunkProviderSpaceCraters;
+import trappistone.core.world.gen.TPBiomeGenBase;
 import trappistone.TrappistSystem.planets.trappistOneB.world.gen.BiomeDecoratorTrappistOneBOre;
 import trappistone.TrappistSystem.planets.trappistOneB.world.gen.MapGenCavesTrappistOneB;
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;

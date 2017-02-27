@@ -1,4 +1,4 @@
-package trappistone.TrappistSystem.core.proxy;
+package trappistone.core.proxy;
 
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import net.minecraft.block.Block;

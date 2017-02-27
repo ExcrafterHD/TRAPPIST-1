@@ -1,4 +1,4 @@
-package trappistone.TrappistSystem.core.world.gen;
+package trappistone.core.world.gen;
 
 import java.util.Random;
 

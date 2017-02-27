@@ -1,4 +1,4 @@
-package trappistone.TrappistSystem.core.proxy;
+package trappistone.core.proxy;
 
 
 import java.io.BufferedReader;
