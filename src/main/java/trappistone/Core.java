@@ -34,7 +34,8 @@ import cpw.mods.fml.relauncher.FMLRelaunchLog;
 public class Core
 
 {
-
+	public static Item itemAlienGel;
+	
 	public static final int major_version = 0;
 	public static final int minor_version = 0;
 	public static final int build_version = 1;
@@ -55,7 +56,11 @@ public class Core
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-
+		
+		itemAlienGel = new ItemFood(12, 1.0F, true);
+		
+		GameRegistry.registerItem(itemAlienGel, AlienGel.getUnlocalizedName().substring(5));
+		
 		proxy.preload();
 	}
 
@@ -71,7 +76,7 @@ public class Core
 				CreativeTabs.getNextID(), "TPBlocks",
 				Item.getItemFromBlock(Blocks.grass), 0);
 		TPCreativeTabs.TPItemsTab = new CreativeTabGC(CreativeTabs.getNextID(),
-				"TPItems", Items.arrow, 0);
+				"TPItems", Core.alienGel, 0);
 		TPCreativeTabs.TPArmorTab = new CreativeTabGC(CreativeTabs.getNextID(),
 				"TPArmor", Items.diamond_helmet, 0);
 
