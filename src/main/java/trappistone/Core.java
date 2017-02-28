@@ -58,8 +58,10 @@ public class Core
 	public void preInit(FMLPreInitializationEvent event) {
 		
 		itemAlienGel = new ItemFood(12, 1.0F, true);
+		itemAlienGel.setUnlocalizedTextures(BLESSENTUMBLE PLEASE PUT THE TEXTURE PATH IN THERE);
 		
 		GameRegistry.registerItem(itemAlienGel, AlienGel.getUnlocalizedName().substring(5));
+		
 		
 		proxy.preload();
 	}
@@ -79,7 +81,9 @@ public class Core
 				"TPItems", Core.alienGel, 0);
 		TPCreativeTabs.TPArmorTab = new CreativeTabGC(CreativeTabs.getNextID(),
 				"TPArmor", Items.diamond_helmet, 0);
-
+		
+		GameRegistry.addRecipe(new ItemStack(itemTable), new Object[]{"SSS", "GCG", "DDD", 'S', Blocks.sand, 'G', Blocks.gravel, 'C', Blocks.cactus, 'D', Blocks.dirt};
+		
 	}
 
 	@EventHandler
